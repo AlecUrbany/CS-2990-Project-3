@@ -15,11 +15,31 @@
 
 [[Go to dining room -&gt;dining room]]</tw-passagedata><tw-passagedata pid="3" name="dining room" tags="" position="1100,350" size="100,100">After you got some delicious slop, you decide to go talk to some of the other survivors and get to know some of them. Hopefully making a friend or two and get some information in the process.
 
-[[Talk to the woman sitting by the fire -&gt;Mulan]]
 
-[[Talk to man standing by the window -&gt;Jeff]]
+(link: &quot;Talk to the woman sitting by the fire&quot;)[(set: $npcMet += 1)(goto: &quot;Mulan&quot;)]
+(link: &quot;Talk to man standing by the window&quot;)[(set: $npcMet += 1)(goto: &quot;Abbas&quot;)]
+(link: &quot;TTalk to woman who served you slop&quot;)[(set: $npcMet += 1)(goto: &quot;Karen&quot;)]
+(if: $npcMet &gt;= 3)[
+	[[Go to assembly -&gt;Assembly]]
+]</tw-passagedata><tw-passagedata pid="4" name="Abbas" tags="" position="1250,350" size="100,100">You approach the man standing by the window.
 
-[[Talk to woman who served you slop -&gt;Karen]]</tw-passagedata><tw-passagedata pid="4" name="Jeff" tags="" position="1300,350" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Karen" tags="" position="1100,600" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Mulan" tags="" position="1100,100" size="100,100"></tw-passagedata></tw-storydata>
+[[Ask who he is-&gt;Abbas info]]
+[[Ask what he is doing -&gt;Abbas state]]
+[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="5" name="Karen" tags="" position="1050,525" size="100,100">You approach the woman who just surved you the scrumptious slop.
+
+[[Ask who she is -&gt;Karen info]]
+[[Ask what she was doing -&gt;Karen state]]
+[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="6" name="Mulan" tags="" position="1100,200" size="100,100">You approach the woman sitting by the fire.
+
+[[Ask who she is -&gt;Mulan info]]
+[[Ask what she was doing -&gt;Mulan state]]
+[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="7" name="Abbas info" tags="" position="1375,250" size="100,100">&quot;My name is Abbas, I used to be in the Pakistan military.&quot;
+
+[[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="8" name="Abbas state" tags="" position="1375,450" size="100,100">&quot;I was just on the lookout for any aliens or animals in the area. Although I am off duty right now I can&#39;t help but to be cautious.&quot;
+
+[[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="9" name="Mulan info" tags="" position="975,150" size="100,100">&quot;My name is Mulan&quot;</tw-passagedata><tw-passagedata pid="10" name="Mulan state" tags="" position="1225,150" size="100,100">&quot;I was just reminiscing about the past. I used to live in Mongolia but after the invasion I lost my family and ended up here.&quot;
+
+[[Back</tw-passagedata><tw-passagedata pid="11" name="init" tags="startup" position="600,100" size="100,100">(set: $npcMet to 0)</tw-passagedata><tw-passagedata pid="12" name="Assembly" tags="" position="1300,600" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="Karen info" tags="" position="900,575" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Karen state" tags="" position="1050,675" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
