@@ -11,35 +11,59 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play CS 2990 Project.</tw-noscript></noscript></tw-story>
 <tw-storydata name="CS 2990 Project" startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="B716625C-5458-4F44-A460-78E439F5C338" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="800,350" size="100,100">One days, aliens came to Earth from a meteor shower, plunging the world into chaos. Humanity tried to communicate with the aliens but it proved to be impossible, they seem to be driven purely by instance and attack any other living organism. The military were unable to stop the aliens, leaving individuals to fend for themselves. As a result, the survivors formed groups and have taken up shelter wherever they could.
 
+(set: $name to (prompt: &quot;Enter your name&quot;, &quot;&quot;))
+
 [[Start -&gt;Safe Haven Hospital]] </tw-passagedata><tw-passagedata pid="2" name="Safe Haven Hospital" tags="" position="950,350" size="100,100">You have woken up in the abandoned hospital the group you recently joined had made their shelter and are calling it &quot;Safe Haven&quot;. You remember the group leaders were going to send out a small party to scavenge for material today. Hoping to be selected  you get up and go get some food in you.
 
 [[Go to dining room -&gt;dining room]]</tw-passagedata><tw-passagedata pid="3" name="dining room" tags="" position="1100,350" size="100,100">After you got some delicious slop, you decide to go talk to some of the other survivors and get to know some of them. Hopefully making a friend or two and get some information in the process.
 
 
-(link: &quot;Talk to the woman sitting by the fire&quot;)[(set: $npcMet += 1)(goto: &quot;Mulan&quot;)]
-(link: &quot;Talk to man standing by the window&quot;)[(set: $npcMet += 1)(goto: &quot;Abbas&quot;)]
-(link: &quot;TTalk to woman who served you slop&quot;)[(set: $npcMet += 1)(goto: &quot;Karen&quot;)]
+(link: &quot;Talk to the woman sitting by the fire&quot;)[
+	(set: $npcMet to $npcMet + 1)
+    (goto: &quot;Mulan&quot;)
+]
+(link: &quot;Talk to man standing by the window&quot;)[
+	(set: $npcMet to $npcMet + 1)
+    (goto: &quot;Abbas&quot;)
+]
+(link: &quot;Talk to woman who served you slop&quot;)
+	[(set: $npcMet to $npcMet + 1)
+    (goto: &quot;Karen&quot;)
+]
 (if: $npcMet &gt;= 3)[
-	[[Go to assembly -&gt;Assembly]]
-]</tw-passagedata><tw-passagedata pid="4" name="Abbas" tags="" position="1250,350" size="100,100">You approach the man standing by the window.
+	[[Go to assembly -&gt;assemblyRoom]]
+]</tw-passagedata><tw-passagedata pid="4" name="Abbas" tags="" position="1300,250" size="100,100">You approach the man standing by the window.
 
 [[Ask who he is-&gt;Abbas info]]
-[[Ask what he is doing -&gt;Abbas state]]
-[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="5" name="Karen" tags="" position="1050,525" size="100,100">You approach the woman who just surved you the scrumptious slop.
+[[Ask what he is doing -&gt;About Abbas]]
+[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="5" name="Karen" tags="" position="1300,500" size="100,100">You approach the woman who just surved you the scrumptious slop.
 
 [[Ask who she is -&gt;Karen info]]
-[[Ask what she was doing -&gt;Karen state]]
+[[Ask her about herself -&gt;About Karen]]
 [[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="6" name="Mulan" tags="" position="1100,200" size="100,100">You approach the woman sitting by the fire.
 
 [[Ask who she is -&gt;Mulan info]]
-[[Ask what she was doing -&gt;Mulan state]]
-[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="7" name="Abbas info" tags="" position="1375,250" size="100,100">&quot;My name is Abbas, I used to be in the Pakistan military.&quot;
+[[Ask her about herself -&gt;About Mulan]]
+[[Finish talking -&gt;dining room]] </tw-passagedata><tw-passagedata pid="7" name="Abbas info" tags="" position="1450,125" size="100,100">&quot;My name is Abbas, I used to be in the Pakistan military.&quot;
 
-[[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="8" name="Abbas state" tags="" position="1375,450" size="100,100">&quot;I was just on the lookout for any aliens or animals in the area. Although I am off duty right now I can&#39;t help but to be cautious.&quot;
+[[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="8" name="Mulan info" tags="" position="1250,100" size="100,100">&quot;My name is Mulan.&quot;
 
-[[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="9" name="Mulan info" tags="" position="975,150" size="100,100">&quot;My name is Mulan&quot;</tw-passagedata><tw-passagedata pid="10" name="Mulan state" tags="" position="1225,150" size="100,100">&quot;I was just reminiscing about the past. I used to live in Mongolia but after the invasion I lost my family and ended up here.&quot;
+[[Back -&gt;Mulan]] 
+</tw-passagedata><tw-passagedata pid="9" name="init" tags="startup" position="600,100" size="100,100">(set: $npcMet to 0)</tw-passagedata><tw-passagedata pid="10" name="Karen info" tags="" position="1450,450" size="100,100">&quot;My name is Karen.&quot;
 
-[[Back</tw-passagedata><tw-passagedata pid="11" name="init" tags="startup" position="600,100" size="100,100">(set: $npcMet to 0)</tw-passagedata><tw-passagedata pid="12" name="Assembly" tags="" position="1300,600" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="Karen info" tags="" position="900,575" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Karen state" tags="" position="1050,675" size="100,100"></tw-passagedata></tw-storydata>
+[[Back -&gt;Karen]]</tw-passagedata><tw-passagedata pid="11" name="assemblyRoom" tags="" position="1100,600" size="100,100">Group leader: &quot;We have decided on the list of people who will be taking part on this scavenging mission. The party will consists of 4 memebers: Mulan, Abbas, Karen and (print: $name).
+
+You 4 will be exploring the abandoned hall we discovered a few days ago and try to find any useful resources you can.&quot;
+
+[[Leave on expedition -&gt;Mall]]</tw-passagedata><tw-passagedata pid="12" name="About Karen" tags="" position="1450,600" size="100,100">&quot;I&#39;m glad we were able to find this hospital. It was really hard on everyone when we were camping around every night. We finally have some shelter and there was equipment and some medicine left behind after this hospital was abandoned too.&quot;
+
+[[Back -&gt;Karen]]</tw-passagedata><tw-passagedata pid="13" name="About Abbas" tags="" position="1450,275" size="100,100">&quot;I was just on the lookout for any potential alien sightings. Someone always needs to be alert in case one is in the area so that everyone can be alerted to stay quiet. They have bad eyesight but are really sensitive to sound.&quot;
+
+[[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="14" name="About Mulan" tags="" position="950,100" size="100,100">&quot;I was just reminiscing about the past. I used to live in Mongolia but after the invasion I lost my family and ended up here.&quot;
+
+[[Back -&gt;Mulan]] 
+
+&lt;!--Maybe need to rewite this section--&gt;</tw-passagedata><tw-passagedata pid="15" name="Mall" tags="" position="1100,725" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
