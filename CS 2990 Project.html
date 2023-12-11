@@ -119,7 +119,7 @@ You 4 will be exploring the abandoned hall we discovered a few days ago and try 
 	<!-- Take Turns Making Eye Contact Prompt -->
 	<tw-passagedata pid="20" name="TakeTurnsPrompt" tags="" position="1100,725" size="100,100">
 		<p>You and Mulan alternate between one another as both of you slowly make your exit. You manage to put some distance between yourselves and the alien, maintaining line of sight with the alien until Mulan sneezes, allowing the alien to bound towards her position.</p>
-		<p>(link: "Turn Around and Help Survivor 1")[
+		<p>(link: "Turn Around and Help Mulan")[
 			(goto: "TurnAroundHelpPrompt")
 			]</p>
 		<p>(link: "Run")[
@@ -200,7 +200,7 @@ You 4 will be exploring the abandoned hall we discovered a few days ago and try 
 
 	<!-- Hide in Dressing Room Prompt -->
 	<tw-passagedata pid="28" name="HideInDressingRoomPrompt" tags="" position="1100,725" size="100,100">
-		<p>You and Mulan make a run for it and hide within one of the rooms. You are initially shocked to find an Alien already in one of the rooms; however, it is immobile, staring at itself in the mirror. Realizing what has happened, you two stand your ground in the room and trap the Alien that has been pursuing you in the same way. Your plan works, and both are able to leave without being followed. You continue on with your scavenging mission and are able to leave on schedule.</p>
+		<p>You and Mulan make a run for it and hide in one of the rooms. You are initially shocked to find an Alien already in one of the rooms; however, it is immobile, staring at itself in the mirror. Realizing what has happened, you two stand your ground in the room and trap the Alien that has been pursuing you in the same way. Your plan works, and both are able to leave without being followed. You continue on with your scavenging mission and are able to leave on schedule.</p>
 		<p>(link: "Go to Ending")[
 			(goto: "Mall")
 			]</p>
@@ -273,10 +273,246 @@ You 4 will be exploring the abandoned hall we discovered a few days ago and try 
 
 			GAME OVER</p>
 	</tw-passagedata>
-
-	</tw-passagedata></tw-storydata>
 	<!-- End of Abandoned Mall Prompt -->
 
+	<!-- Go to the Abandoned School Prompt -->
+</tw-passagedata><tw-passagedata pid="16" name="SchoolPrompt" tags="" position="1100,725" size="100,100">
+		<p>The group heads to the abandoned school, spotting a few aliens along the way, but narrowly avoiding them by darting across debris.</p>
+		<p>You all eventually arrive at the school, and discover that it’s a huge school with multiple buildings. Mulan makes notes of the location and they decide to explore, but Abbas speaks up.
+			“We should split up to cover more ground. The aliens tend to hunt in larger numbers at night. If we split up, we can explore most of the area before night comes.”
+			Karen seems a little bothered by the suggestion, but reluctantly agrees, as well as everyone else.</p>
+		<p>You go off on your own to explore a small classroom, filled with chairs and tables that seem to be torn apart as if they were pieces of paper. You see a closed cabinet.</p>
+		<p>(link: "Open Top Drawer")[
+			(goto: "OpenTopDrawerPrompt")
+			]</p>
+		<p>(link: "Open Cabinet Doors")[
+			(goto: "OpenCabinetDoorsPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Open Top Drawer Prompt -->
+	<tw-passagedata pid="17" name="OpenTopDrawerPrompt" tags="" position="1100,725" size="100,100">
+		<p>You discover a few cans of food in the top drawer of a cabinet full of emergency resources, and you place the resources in your backpack.</p>
+		<p>(link: "Go Back")[
+			(goto: "SchoolPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Open Cabinet Doors Prompt -->
+	<tw-passagedata pid="18" name="OpenCabinetDoorsPrompt" tags="" position="1100,725" size="100,100">
+		<p>You discover a person… Who doesn’t seem to be breathing. They’re holding a journal of some sort.</p>
+		<p>(link: "Take The Journal")[
+			(goto: "TakeTheJournalPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Take The Journal Prompt -->
+	<tw-passagedata pid="19" name="TakeTheJournalPrompt" tags="" position="1100,725" size="100,100">
+		<p>You hesitate for a moment, before reluctantly grabbing the journal. You get curious and open it to begin reading it, before getting interrupted by a low growl at the entrance of the classroom.</p>
+		<p>You spot an Alien stomping slowly, scanning the room. It’s not looking at you just yet. You frantically look around to find options.</p>
+		<p>(link: "Hide Behind A  Knocked-Over Table")[
+			(goto: "HideBehindAKnocked-OverTablePrompt")
+			]</p>
+		<p>(link: "Pull The Corpse Out And Hide Inside The Closet")[
+			(goto: "PullTheCorpseOutAndHideInsideTheClosetPrompt")
+			]</p>
+		<p>(link: "Look At The Alien And Stand Your Ground")[
+			(goto: "LookAtTheAlienAndStandYourGroundPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Hide Behind A  Knocked-Over Table Prompt -->
+	<tw-passagedata pid="20" name="HideBehindAKnocked-OverTablePrompt" tags="" position="1100,725" size="100,100">
+		<p>You dart behind a knocked-over table and hold your breath, hoping the Alien won’t notice. A few minutes pass, and the Alien’s stomps grow closer, knocking over a few tables as they come closer.</p>
+		<p>(link: "Stay")[
+			(goto: "StayPrompt")
+			]</p>
+		<p>(link: "Stand Up From The Desk And Look At The Alien")[
+			(goto: "LookAtTheAlienAndStandYourGroundPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Stay Prompt -->
+	<tw-passagedata pid="21" name="StayPrompt" tags="" position="1100,725" size="100,100">
+		<p>The alien’s stomps grow closer, but you commit and hope the alien doesn’t notice. You believe your hopes are answered as the stomping comes to a stop, but you suddenly hear a low growl next to your ear before feeling a sharp pain in your stomach. You look down to see one of the Alien’s claws protruding out the front of your stomach. You look up to see the Alien’s gleaming, pupilless eyes before losing consciousness.
+
+			GAME OVER</p>
+	</tw-passagedata>
+
+	<!-- Look At The Alien And Stand Your Ground Prompt -->
+	<tw-passagedata pid="24" name="LookAtTheAlienAndStandYourGroundPrompt" tags="" position="1100,725" size="100,100">
+		<p>With seemingly no other options, you decide to stand your ground and stare at the alien. Its beady red eyes stare right back at you, as it lets out a low growl. You’re running out of options…
+			You hear another set of stomping from outside the classroom, and it grows louder as another alien crawls into the classroom. You look frantically between the two, but it’s no use. You can’t look at them both…
+			You close your eyes and accept your fate, as you feel a sharp pain in your abdomen, breathing your last breath.
+
+			GAME OVER</p>
+	</tw-passagedata>
+
+	<!-- Pull The Corpse Out And Hide Inside The Closet Prompt -->
+	<tw-passagedata pid="23" name="PullTheCorpseOutAndHideInsideTheClosetPrompt" tags="" position="1100,725" size="100,100">
+		<p>You yank the corpse out before jumping in the cabinet and closing the doors. You control their breathing. Outside, the Alien’s stomps grow more frequent and louder. You hear the Alien lunge forward and hear flesh being torn and the crunching of bones, as the Alien devours the corpse. You struggle to control their breathing and stay silent, clutching the journal tightly in your arms. As you clutch it, the thought crosses your mind: “Why was the person in the closet clutching this journal?...” You open the journal quietly and try to read anything you can see, using a bit of light from a slit in the cabinet door shining down on the pages.</p>
+
+		<p>(link: "Read The First Page")[
+			(goto: "ReadTheFirstPagePrompt")
+			]</p>
+		<p>(link: "Read A Few Pages In The Middle")[
+			(goto: "ReadAFewPagesInTheMiddlePrompt")
+			]</p>
+		<p>(link: "Read The Last Page")[
+			(goto: "ReadTheLastPagePrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The First Page Prompt -->
+	<tw-passagedata pid="21" name="ReadTheFirstPagePrompt" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read A Few Pages In The Middle")[
+			(goto: "ReadAFewPagesInTheMiddlePrompt1")
+			]</p>
+		<p>(link: "Read The Last Page")[
+			(goto: "ReadTheLastPagePrompt1")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The First Page Prompt -->
+	<tw-passagedata pid="21" name="ReadTheFirstPagePrompt1" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read The Last Page")[
+			(goto: "ReadTheLastPagePrompt3")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The First Page Prompt -->
+	<tw-passagedata pid="21" name="ReadTheFirstPagePrompt2" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read A Few Pages In The Middle")[
+			(goto: "ReadAFewPagesInTheMiddlePrompt3")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The First Page Prompt -->
+	<tw-passagedata pid="21" name="ReadTheFirstPagePrompt3" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Next")[
+			(goto: "CloseTheJournalPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read A Few Pages In The Middle Prompt -->
+	<tw-passagedata pid="22" name="ReadAFewPagesInTheMiddlePrompt" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read The First Page")[
+			(goto: "ReadTheFirstPagePrompt1")
+			]</p>
+		<p>(link: "Read The Last Page")[
+			(goto: "ReadTheLastPagePrompt2")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read A Few Pages In The Middle Prompt -->
+	<tw-passagedata pid="22" name="ReadAFewPagesInTheMiddlePrompt1" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read The Last Page")[
+			(goto: "ReadTheLastPagePrompt3")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read A Few Pages In The Middle Prompt -->
+	<tw-passagedata pid="22" name="ReadAFewPagesInTheMiddlePrompt2" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read The First Page")[
+			(goto: "ReadTheFirstPagePrompt3")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read A Few Pages In The Middle Prompt -->
+	<tw-passagedata pid="22" name="ReadAFewPagesInTheMiddlePrompt3" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Next")[
+			(goto: "CloseTheJournalPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The Last Page Prompt -->
+	<tw-passagedata pid="23" name="ReadTheLastPagePrompt" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read The First Page")[
+			(goto: "ReadTheFirstPagePrompt1")
+			]</p>
+		<p>(link: "Read A Few Pages In The Middle")[
+			(goto: "ReadAFewPagesInTheMiddlePrompt2")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The Last Page Prompt -->
+	<tw-passagedata pid="23" name="ReadTheLastPagePrompt1" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read A Few Pages In The Middle")[
+			(goto: "ReadAFewPagesInTheMiddlePrompt3")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The Last Page Prompt -->
+	<tw-passagedata pid="23" name="ReadTheLastPagePrompt2" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Read The First Page")[
+			(goto: "ReadTheFirstPagePrompt3")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read The Last Page Prompt All Pages Read-->
+	<tw-passagedata pid="23" name="ReadTheLastPagePrompt3" tags="" position="1100,725" size="100,100">
+		<p>You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.</p>
+		<p>(link: "Next")[
+			(goto: "CloseTheJournalPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Close The Journal Prompt -->
+	<tw-passagedata pid="24" name="CloseTheJournalPrompt" tags="" position="1100,725" size="100,100">
+		<p>You close the journal gently, hoping not to alert the alien outside. You shift your position a bit to get a closer look as to what’s happening outside, peeking through the slit in the cabinet. As you shift, you feel something sharp below you; it’s a large shard of glass…
+			Before you can process, you hear the familiar voice of Karen shouting at the door of the classroom.
+			“Hey, I need a second pair of eyes!” You hear Karen shout. “One of them’s chasing me-”
+			Karen gets cut off as they seem to notice the alien in the room. Your eyes widen in fear as you watch from the closet, seeing the alien turn its head towards Karen</p>
+		<p>(link: "Jump Out Of The Closet")[(goto: "JumpOutOfTheClosetPrompt")]</p>
+		<p>(link: "Stay In The Closet")[(goto: "StayInTheClosetPrompt")]</p>
+	</tw-passagedata>
+
+
+	<!-- Jump Out Of The Closet Prompt -->
+	<tw-passagedata pid="24" name="JumpOutOfTheClosetPrompt" tags="" position="1100,725" size="100,100">
+		<p>You burst out of the closet, with the shard of glass in your hand. You look at the Alien intently after glancing.</p>
+		<p>(link: "Raise The Piece Of Glass Towards The Alien")[
+			(goto: "RaiseThePieceOfGlassTowardsTheAlienPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Raise The Piece Of Glass Towards The Alien Prompt -->
+	<tw-passagedata pid="24" name="RaiseThePieceOfGlassTowardsTheAlienPrompt" tags="" position="1100,725" size="100,100">
+		<p>With almost no confidence of whether or not you’re making the right call, you raise the glass toward the alien to show its own reflection.
+			You watch as the alien spasms for a moment before it starts violently scratching and tearing at its own hide, spilling its contents across the floor of the classroom and splashing its dark red blood across the walls.
+			You slowly look back up at Karen, with an astonished look on your face, to which Karen returns. You hear the loud stomping of the alien that was chasing Karen, and you rush past her to try the same thing on the alien.
+			You and Karen watch as the alien stops in its tracks and stares at the piece of glass in your hand for a moment before bashing its head into one of its claws, slumping over on the ground.
+			“Wha-... How’d you know that would work?” Karen asks you in a confused tone.
+			“I’ll explain later, let's meet back up with the others. Let’s hope they’re not in trouble.”
+			The scavenging group meets up, and it turns out everyone made it out alive. You briefly describe you encounter with the aliens and how they killed themselves after looking at their reflection. You all make your way back to the Safe Haven.
+		</p>
+		<p>(link: "Go to Ending")[
+			(goto: "Mall")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Stay In The Closet Prompt -->
+	<tw-passagedata pid="24" name="StayInTheClosetPrompt" tags="" position="1100,725" size="100,100">
+		<p>You stay in the closet, controlling your breathing. You decide to conceal your position and watch as Karen frantically struggles to figure out which alien to look at; the one behind or the one in the room. It’s no use however, and you watch as Devin gets violently torn to pieces. You let out a gasp, and the alien lunges towards the cabinet, ending your life before you could even react…
+
+			GAME OVER</p>
+	</tw-passagedata>
+	<!-- End of Abandoned School Prompt -->
+
+	
+	
+	</tw-passagedata></tw-storydata>
 	
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
