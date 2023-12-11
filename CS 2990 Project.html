@@ -61,9 +61,223 @@ You 4 will be exploring the abandoned hall we discovered a few days ago and try 
 
 [[Back -&gt;Abbas]] </tw-passagedata><tw-passagedata pid="14" name="About Mulan" tags="" position="950,100" size="100,100">&quot;I was just reminiscing about the past. I used to live in Mongolia but after the invasion I lost my family and ended up here.&quot;
 
-[[Back -&gt;Mulan]] 
+[[Back -&gt;Mulan]] </tw-passagedata><tw-passagedata pid="15" name="Mall" tags="" position="1100,725" size="100,100">
+	<p>(link: "Go to the Abandoned Mall")[
+		(goto: "MallPrompt")
+		]</p>
+	<p>(link: "Go to the Abandoned School")[
+		(goto: "SchoolPrompt")
+		]</p>
+	<p>(link: "Go to the Abandoned Hospital")[
+		(goto: "HospitalPrompt")
+		]</p>
+	<p>(link: "Go to the Warehouse Facility")[
+		(goto: "WarehousePrompt")
+		]</p>
 
-&lt;!--Maybe need to rewite this section--&gt;</tw-passagedata><tw-passagedata pid="15" name="Mall" tags="" position="1100,725" size="100,100"></tw-passagedata></tw-storydata>
+	<!-- Abandoned Mall Prompt -->
+</tw-passagedata><tw-passagedata pid="16" name="MallPrompt" tags="" position="1100,725" size="100,100">
+	<p>The group heads to the abandoned, multi-level indoor mall, seeing several aliens amongst the wrecks of abandoned cars in the main parking lot in front of the entrance. Although the aliens are made aware of their presence, since they cannot move while the group’s eyes are upon them, they are aware when there are people in the vicinity. The group somehow manages to get into the front entrance by using the cars.</p>
+	<p>Arriving at the first floor of the mall, the group decides to spend only one hour searching the premises, fearing discovery by the aliens outside. The group decides to split up, in order to cover more ground - Mulan goes with the player, and Abbas goes with Karen.</p>
+	<p>You are accompanied by Mulan and go to the second floor of the mall, into one of the larger department stores, scavenging for any remaining non-perishable food items and hygiene supplies. However, Mulan drops one of these items, making a loud noise and alerting a previously undetected alien to their presence. None of you have seen the alien yet, but they can hear it walking towards their position.</p>
+	<p>(link: "Hide")[
+		(goto: "HidePrompt")
+		]</p>
+	<p>(link: "Run for Exit")[
+		(goto: "RunForExitPrompt")
+		]</p>
+	<p>(link: "Stand Ground")[
+		(goto: "StandGroundPrompt")
+		]</p>
+</tw-passagedata>
+
+	<!-- Hide Prompt -->
+	<tw-passagedata pid="17" name="HidePrompt" tags="" position="1100,725" size="100,100">
+		<p>You attempt to hide in the aisle, hoping that the alien has not already located your exact position. Unfortunately, it already knows, and both you and Mulan die.
+
+			GAME OVER</p>
+	</tw-passagedata>
+
+	<!-- Run for Exit Prompt -->
+	<tw-passagedata pid="18" name="RunForExitPrompt" tags="" position="1100,725" size="100,100">
+		<p>Both you and Mulan run for the exit, dropping all of your collected supplies. The alien is much faster, and you do not survive.
+
+			GAME OVER</p>
+	</tw-passagedata>
+
+	<!-- Stand Ground Prompt -->
+	<tw-passagedata pid="19" name="StandGroundPrompt" tags="" position="1100,725" size="100,100">
+		<p>Mulan stares down the alien while you look for a way to defeat the alien.</p>
+		<p>(link: "Take Turns Making Eye Contact w/ Alien")[
+			(goto: "TakeTurnsPrompt")
+			]</p>
+		<p>(link: "Find Place to Hide")[
+			(goto: "FindPlaceToHidePrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Take Turns Making Eye Contact Prompt -->
+	<tw-passagedata pid="20" name="TakeTurnsPrompt" tags="" position="1100,725" size="100,100">
+		<p>You and Mulan alternate between one another as both of you slowly make your exit. You manage to put some distance between yourselves and the alien, maintaining line of sight with the alien until Mulan sneezes, allowing the alien to bound towards her position.</p>
+		<p>(link: "Turn Around and Help Survivor 1")[
+			(goto: "TurnAroundHelpPrompt")
+			]</p>
+		<p>(link: "Run")[
+			(goto: "RunPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Turn Around and Help Prompt -->
+	<tw-passagedata pid="21" name="TurnAroundHelpPrompt" tags="" position="1100,725" size="100,100">
+		<p>You turn around just in time, as the alien is now right in front of you. You two resume your previous escape tactic, and eventually are able to run to the exit.</p>
+		<p>(link: "Go to Ending")[
+			(goto: "Mall")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Run Prompt -->
+	<tw-passagedata pid="22" name="RunPrompt" tags="" position="1100,725" size="100,100">
+		<p>You bolt, with Mulan trailing behind her. Make a split-second decision!</p>
+		<p>(link: "Split Up")[
+			(goto: "SplitUpPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Split Up Prompt -->
+	<tw-passagedata pid="23" name="SplitUpPrompt" tags="" position="1100,725" size="100,100">
+		<p>Splitting up with Mulan, in hopes that one of you will be able to escape.</p>
+		<p>(link: "Go Right")[
+			(goto: "GoRightPrompt")
+			]</p>
+		<p>(link: "Go Left")[
+			(goto: "GoLeftPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Go Right Prompt -->
+	<tw-passagedata pid="24" name="GoRightPrompt" tags="" position="1100,725" size="100,100">
+		<p>You run right and, upon seeing an emergency exit stairwell, elect to enter it. Unfortunately, the alien chooses to follow you, and, as there is no way to maintain a line of sight with the alien in the stairwell, it manages to quickly catch up.
+
+			GAME OVER.</p>
+	</tw-passagedata>
+
+	<!-- Go Left Prompt -->
+	<tw-passagedata pid="25" name="GoLeftPrompt" tags="" position="1100,725" size="100,100">
+		<p>You run left and see an elevator. Fortunately, the alien has decided to pursue Mulan. You manage to get down the elevator onto the first floor:</p>
+		<p>(link: "Exit the Mall")[
+			(goto: "ExitMallPrompt")
+			]</p>
+		<p>(link: "Try to Find Abbas and Karen")[
+			(goto: "TryToFindSurvivorsPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Exit Mall Prompt -->
+	<tw-passagedata pid="26" name="ExitMallPrompt" tags="" position="1100,725" size="100,100">
+		<p>You exit the mall, empty-handed. Eventually, you are able to rendezvous with Survivor 2 and Survivor 3 after waiting for them at the mall’s entrance.
+		</p>
+		<p>(link: "Go to Ending")[
+			(goto: "Mall")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Try To Find Survivors Prompt -->
+	<tw-passagedata pid="26" name="TryToFindSurvivorsPrompt" tags="" position="1100,725" size="100,100">
+		<p>You go down to the first floor and try to find the other two survivors. Instead, however, you see an alien, and, the alien, being immobilized, realizes you are there. Being without a partner, you are unable to move safely, and, after blinking, die.
+
+			GAME OVER</p>
+	</tw-passagedata>
+
+	<!-- Find Place To Hide Prompt -->
+	<tw-passagedata pid="20" name="FindPlaceToHidePrompt" tags="" position="1100,725" size="100,100">
+		<p>(link: "Hide in Dressing Room")[
+			(goto: "HideInDressingRoomPrompt")
+			]</p>
+		<p>(link: "Hide in EMPLOYEE ONLY Room")[
+			(goto: "HideInEmployeeRoomPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Hide in Dressing Room Prompt -->
+	<tw-passagedata pid="28" name="HideInDressingRoomPrompt" tags="" position="1100,725" size="100,100">
+		<p>You and Mulan make a run for it and hide within one of the rooms. You are initially shocked to find an Alien already in one of the rooms; however, it is immobile, staring at itself in the mirror. Realizing what has happened, you two stand your ground in the room and trap the Alien that has been pursuing you in the same way. Your plan works, and both are able to leave without being followed. You continue on with your scavenging mission and are able to leave on schedule.</p>
+		<p>(link: "Go to Ending")[
+			(goto: "Mall")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Hide in EMPLOYEE ONLY Room Prompt -->
+	<tw-passagedata pid="29" name="HideInEmployeeRoomPrompt" tags="" position="1100,725" size="100,100">
+		<p>You two try to sneak into the room; however, the door hinges have not been lubricated for a long time, and the alien is immediately alerted to their presence:</p>
+		<p>(link: "Run Into Room & Barricade Door")[
+			(goto: "BarricadeDoorPrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Barricade Door Prompt -->
+	<tw-passagedata pid="30" name="BarricadeDoorPrompt" tags="" position="1100,725" size="100,100">
+		<p>Working together, you and Mulan manage to barricade the door temporarily. The alien is making a great effort to break down the door; you estimate that you have only five minutes before the door is broken down so you search the room for a possible solution to your problem.</p>
+		<p>(link: "Search Manager’s Office")[
+			(goto: "SearchManagerOfficePrompt")
+			]</p>
+		<p>(link: "Stand Ground")[
+			(goto: "StandGroundPrompt2")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Search Manager’s Office Prompt -->
+	<tw-passagedata pid="31" name="SearchManagerOfficePrompt" tags="" position="1100,725" size="100,100">
+		<p>You find a long-deceased body behind a cabinet. The body is clutching a book, of some sorts, stained by dried blood.</p>
+		<p>(link: "Read Book")[
+			(goto: "ReadBookPrompt")
+			]</p>
+		<p>(link: "Continue Looking For Clues")[
+			(goto: "ContinueLookingForCluesPrompt1")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Read Book Prompt -->
+	<tw-passagedata pid="32" name="ReadBookPrompt" tags="" position="1100,725" size="100,100">
+		<p>The book is a journal, presumably owned by the deceased. Flipping to the last page, the following text can be read, albeit written by a clearly unsteady hand.</p>
+		<p>(link: "Continue Looking For Clues")[
+			(goto: "ContinueLookingForCluesPrompt2")
+			]</p>
+		<p>(link: "Exit the Office")[
+			(goto: "FindPlaceToHidePrompt")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Continue Looking For Clues Prompt 1 Book not read -->
+	<tw-passagedata pid="33" name="ContinueLookingForCluesPrompt1" tags="" position="1100,725" size="100,100">
+		<p>You continue searching the manager’s office to no avail. Mulan spots a backdoor from which you can exit from; with little choice, the pair sneak out and find a way to escape.
+
+			You try to make for the exit, but are quickly sighted by the alien and are killed.
+
+			GAME OVER</p>
+
+	</tw-passagedata>
+
+	<!-- Continue Looking For Clues Prompt 2 Book read -->
+	<tw-passagedata pid="33" name="ContinueLookingForCluesPrompt2" tags="" position="1100,725" size="100,100">
+		<p>You continue searching the manager’s office to no avail. Mulan spots a backdoor from which you can exit from; with little choice, the pair sneak out and must find a way to escape.
+
+			You make your way to escape from the mall, and are able to meet up with Abbas and Karen, though they are empty-handed.</p>
+		<p>(link: "Go to Ending")[
+			(goto: "Mall")
+			]</p>
+	</tw-passagedata>
+
+	<!-- Stand Ground Prompt -->
+	<tw-passagedata pid="36" name="StandGroundPrompt2" tags="" position="1100,725" size="100,100">
+		<p>You turn around attempting to regain sight of the alien as you two had done previously. However, you are too slow this time around and are killed.
+
+			GAME OVER</p>
+	</tw-passagedata>
+
+	</tw-passagedata></tw-storydata>
+	<!-- End of Abandoned Mall Prompt -->
+
+	
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
