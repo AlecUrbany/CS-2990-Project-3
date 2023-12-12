@@ -8,7 +8,7 @@ CS 2990 Project
   "format": "Harlowe",
   "format-version": "3.3.7",
   "start": "Start",
-  "zoom": 0.6
+  "zoom": 1
 }
 
 
@@ -22,7 +22,6 @@ You are accompanied by Mulan and go to the second floor of the mall, into one of
 [[Hide->Hide]]
 [[Run for Exit->RunForExit]]
 [[Stand Ground->StandGround]]
-
 
 
 :: Abbas {"position":"1375,200","size":"100,100"}
@@ -70,7 +69,7 @@ She pauses for a moment. “I tried calling him as many times as I could, but he
 :: AboutExploration {"position":"1150,50","size":"100,100"}
 “Right now we’ve explored quite a bit outside of our Safe Haven, but we dried up all the resources within a half-mile radius.”  She points to a circle surrounding the Safe Haven hospital on the map. 
 
-“We plan to search inside a few locations, including a mall and a school. I’ll be a part of that scavenging group that explores these areas. I heard you’ll be tagging along. Let’s hope you’re as tough as you look.” She says with a slight chuckle. 
+“We plan to search inside a few locations, including a mall, a school, and another abandoned hospital. I’ll be a part of that scavenging group that explores these areas. I heard you’ll be tagging along. Let’s hope you’re as tough as you look.” She says with a slight chuckle. 
 
 [[Back ->Mulan]]
 (set: $count to $count + 1)
@@ -84,6 +83,13 @@ Abbas suddenly looks at you with a stern expression. “Be sure to watch my back
 (set: $count to $count + 1)
 
 
+:: AntidotesFile {"position":"2775,225","size":"100,100"}
+File: Antidote - As you read this file it explains what each bottle in the fridge is and what it does. The bottles are used to various diseases soo you decide to grab some to bring back to Safe Haven.
+
+[[Back->LookIntoCabinets]] 
+(set: $count to $count + 1)
+
+
 :: AskAlienWeakness {"position":"1525,75","size":"100,100"}
 “Not that we know of…” Abbas says with a disappointed click of his tongue. “Tch. Their skin too hard to even damage them, and never have we seen one of them be taken down.” He pauses for a moment. “We have spotted a few of their corpses lying around… So it's possible for them to be killed. But we can’t for the life of us figure out how they die.”
 
@@ -92,8 +98,7 @@ Abbas suddenly looks at you with a stern expression. “Be sure to watch my back
 
 
 :: BarricadeDoor {"position":"1925,1350","size":"100,100"}
-
-		Working together, you and Mulan manage to barricade the door temporarily. The alien is making a great effort to break down the door; you estimate that you have only five minutes before the door is broken down so you search the room for a possible solution to your problem.
+Working together, you and Mulan manage to barricade the door temporarily. The alien is making a great effort to break down the door; you estimate that you have only five minutes before the door is broken down so you search the room for a possible solution to your problem.
 [[Search Manager’s Office->SearchManagerOffice]]
 [["Stand Ground->StandGround2]]
 
@@ -148,6 +153,18 @@ The scavenging group meets up, and it turns out everyone made it out alive. You 
 THE END
 
 
+:: Ending5 {"position":"3375,175","size":"100,100"}
+As you regroup with Karen and Abbas you show them the files and tell them how you were able to kill one of the aliens. Now knowing that the aliens can be defeated, the four of you go back to Safe Haven with hopes in your eyes.
+
+THE END
+
+
+:: Ending6 {"position":"3025,425","size":"100,100"}
+You and Karen group with Mulan and Abbas, letting them know what just happend. Abbas and Mulan both agree this is worht investigating and would prove to be critical information if you can figure out what caused the alien to kill itself. 
+
+THE END
+
+
 :: ExitMallPrompt {"position":"2550,950","size":"100,100"}
 You exit the mall, empty-handed. Eventually, you are able to rendezvous with Abbas and Karen after waiting for them at the mall’s entrance.
 
@@ -177,10 +194,8 @@ After you got some delicious slop, you sit down to eat your food before deciding
 
 
 :: FindPlaceToHide {"position":"1600,1200","size":"100,100"}
-
 [[Hide in Dressing Room->HideInDressingRoom]]
 [[Hide in EMPLOYEE ONLY Room->HideInEmployeeRoom]]
-
 
 
 :: GoLeft {"position":"2275,1000","size":"100,100"}
@@ -191,16 +206,21 @@ You run left and see an elevator. Fortunately, the alien has decided to pursue M
 
 
 :: GoRight {"position":"2375,1125","size":"100,100"}
-
-		You run right and, upon seeing an emergency exit stairwell, elect to enter it. Unfortunately, the alien chooses to follow you, and, as there is no way to maintain a line of sight with the alien in the stairwell, it manages to quickly catch up.
+You run right and, upon seeing an emergency exit stairwell, elect to enter it. Unfortunately, the alien chooses to follow you, and, as there is no way to maintain a line of sight with the alien in the stairwell, it manages to quickly catch up.
 
 			GAME OVER.
 <img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
 
 
-:: Hide {"position":"1700,900","size":"100,100"}
+:: HelpMulan {"position":"3200,25","size":"100,100"}
+As you are running out you run into another alien. 
 
-		You attempt to hide in the aisle, hoping that the alien has not already located your exact position. Unfortunately, it already knows, and both you and Mulan die.
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: Hide {"position":"1700,900","size":"100,100"}
+You attempt to hide in the aisle, hoping that the alien has not already located your exact position. Unfortunately, it already knows, and both you and Mulan die.
 
 			GAME OVER
 <img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
@@ -224,57 +244,20 @@ You two try to sneak into the room; however, the door hinges have not been lubri
 [[Run Into Room & Barricade Door->BarricadeDoor]]
 
 
-:: HospitalPrompt" {"position":"875,550","size":"100,100"}
+:: Hospital {"position":"2300,350","size":"100,100"}
 The group heads through destroyed and opened gates leading to the 2 story abandoned hospital, dodging a few aliens on the way in by staying low
+
+Mulan: “Everyone stay low and close we don’t need to be spotted right now.”
+
+Abbbas: “We need a game plan before we start exploring the place.”
 
 As soon as you enter the place there is a disaster of papers full of patients names and stairs leading up to the second floor of the hospital. The stairs also lead up to the roof where the aliens have taken a stance looking for survivors.
 
-:: SplitUp" {"position":"875,550","size":"100,100"}
-[[Split Up With Mulan -> SplitUpWithMulan]]
-[[Split Up With Karen -> SplitUpWithKaren]]
+Karen: “Okay look this is a huge space for us to waste time going as one big group. I say we split up and find more resources to help us defeat these alien beings. We can split into groups of 2 to make sure everyone at least has a way to escape even if that means sacrificing.”
 
-:: SplitUpWithMulan" {"position":"875,550","size":"100,100"} 
-You and Mulan head deeper into level one as Karen and Abbas head upstairs. As you go deeper down the hall you discover there are 2 rooms across from each other and so you go into room 1 “Documents” and survivor 1 into “Supplies”. You walk in to see 2 cabinets filled with documents labeled “Unknown creatures”. But you also see a fridge full of small liquid bottles and mirrors
-If “you look into cabinets first”: You see 2 main files. One says antidotes, one says weaknesses. 
+[[Split Up With Mulan->SplitUpWithMulan]] 
+[[Split Up With Karen->SplitOffWithKaren]] 
 
-File: Weaknesses - When you open the file it shows images that have been captured of the aliens and everything that was found out about them. It reads that if mirrors were to be presented in front of them they would die the same way survivors would if looked in the eyes. 
-
-This is when you here a call for help from Mulan, so you quickly grab the mirror from the fridge and face it outward to the aliens. You and Mulan make it out and regroup with the others taking the files.
-
-File: Antidote - As you read this file it explains what each bottle in the fridge is and what it does. The bottles are used to inject into a survivor if they were to accidentally look away but only works before they are affected for 10 seconds. 
-
-As you’re reading on you hear a strong call for help from Mulan. As you are running out you run into another alien. 
-
-GAME OVER
-<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
-
-:: OpenFridgeFirst" {"position":"875,550","size":"100,100"} 
-When you open the fridge you see bottles of liquid and mirrors. You choose to look at both when you hear an alien coming and you need to choose one.
-
-Liquid bottle - The label writes, inject when in sight of an alien. As the alien approaches the room you look into its eyes and quickly inject the liquid. Before you go down you are able to take in the liquid and run out to warn survivor 1 and regroup.
-
-Mirror - Player quickly grabs the mirror, missing the back that writes to face the reflection to the aliens. As they flip the mirror they see the reflection of the aliens' eyes. 
-
-GAME OVER 
-<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
-
-:: SplitOffWithKaren" {"position":"875,550","size":"100,100"} 
-You head up the stairs with Karen as Mulan and Abbas head into the hall. As you cautiously go up the stairs you hear aliens coming down from the roof. 
-
-You go into what looks like an abandoned surgery room. While looking at shards of glass mirrors and decaying tools you hear an alien enter. 
-(if: KarenDistractAlien is true) 
-Karen holds the aliens’ eyes to give you a few seconds to grab a weapon. Player takes a chance and grabs a piece of mirror to face toward the alien. 
-
-The alien looks into its eyes and dies as survivors would. You and Karen take this chance to run down and warn the others.
-
-(if: YouDistractAlien is true) 
-You stand in front of alien for a few seconds of distraction. As Karen looks, the player grows weaker and weaker. To no avail, Karen is too late.
-
-GAME OVER
-<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
-
-:: RegroupWithOtherSurvivors" {"position":"875,550","size":"100,100"} 
-You manage to escape, you find the others and regroup. With everything they have left, all survivors run out from the entrance. Within the debris they squat down until the aliens clear out back to the roof.
 
 :: JumpOutOfTheCloset {"position":"1025,2100","size":"100,100"}
 You burst out of the closet, with the shard of glass in your hand. You look at the Alien intently after glancing.
@@ -299,12 +282,18 @@ The survivor that's helping out the man seems to be a tall… man? Woman? You’
 ]
 
 
-
 :: KarenDay {"position":"1600,525","size":"100,100"}
 Karen lets out a sigh. “Way too much, to be honest… That man that you saw was the 15th person this day. It seems like the scavenger expeditions aren’t getting any easier…” Devin says sadly. “Speaking of expeditions, I’ll be joining you later. You can count on me for any injuries you encounter, alright?”
 
 [[Back ->Karen]]
 (set: $count to $count + 1)
+
+
+:: KarenDistract {"position":"2850,600","size":"100,100"}
+Karen manages to get the alien's attention and lock eyes with it, but due to the dust in air she is struggling to keep herself from blinking. You try to distract the alien but it is too late, Karen blinks.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
 
 
 :: LookAtTheAlien {"position":"1300,1525","size":"100,100"}
@@ -318,8 +307,31 @@ GAME OVER
 <img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
 
 
+:: LookIntoCabinets {"position":"2850,75","size":"100,100"}
+You see 2 main files. One says antidotes, one says weaknesses. 
+
+(if: $count is 0)[
+	[[Look At Antidotes File->AntidotesFile]]
+	[[Look At Weaknesses File->WeaknessFile]]
+](else:)[
+	You hear a call for help coming from Mulan.
+    [[Run To Help Her->HelpMulan]]
+]
+(if: $weaknessFile is true)[
+	As you turn to run out of the room you notice a mirror on another shelf.
+    [[Grab Mirror->MirrorGrabbed]]
+]
+
+
+:: MirrorGrabbed {"position":"3200,175","size":"100,100"}
+Using the mirror you got the alien to kill itself and saved Mulan. You and Mulan make it out and regroup with the others taking the files.
+
+[[Go To Ending->Ending5]]
+
+
+
 :: Mulan {"position":"1075,200","size":"100,100"}
-	You walk into a room with a laid-out map of the surrounding area, and you meet a rough-looking asian woman, with her hair tied-up in a ponytail. As you approach her, she looks towards you and you notice a scar across her eye.
+You walk into a room with a laid-out map of the surrounding area, and you meet a rough-looking asian woman, with her hair tied-up in a ponytail. As you approach her, she looks towards you and you notice a scar across her eye.
 	“Hey there. You look like you just woke up. Something you need?” She asks you, as she shakes your hand. “My name’s Mulan by the way. I’m just examining the map right now.” 
 
 [[Ask her about herself ->About Mulan]]
@@ -391,7 +403,6 @@ You skim across some handwriting, and you figure out that it’s a journal full 
 [[Back->PullCorpseOutAndHide]]
 
 
-
 :: ReadTheLastPage {"position":"1250,1775","size":"100,100"}
 The journal describes the author having to hide themselves in this closet for days, with the final entry being their last day. He wrote about how two aliens had chased him to this classroom, and how he hid in this closet for days, waiting for the aliens to leave. It seems the aliens didn’t leave, forcing the author to stay in this closet until he ultimately died of starvation. The entry ends with a slight scribble, signifying his last breath.
 
@@ -410,8 +421,7 @@ The two of you decide to split up, in hopes that one of you will be able to esca
 
 
 :: RunForExit {"position":"1675,775","size":"100,100"}
-
-		Both you and Mulan run for the exit, dropping all of your collected supplies. The alien is much faster, and you do not survive.
+Both you and Mulan run for the exit, dropping all of your collected supplies. The alien is much faster, and you do not survive.
 
 			GAME OVER
 <img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
@@ -443,9 +453,26 @@ You find a long-deceased body behind a cabinet. The body is clutching a book, of
 [[Continue Looking For Clues->ContinueLookingForCluesPrompt1]]
 
 
-:: StandGround {"position":"1600,1050","size":"100,100"}
+:: SplitOffWithKaren {"position":"2650,500","size":"100,100"}
+You head up the stairs with Karen as Mulan and Abbas head into the hall. As you cautiously go up the stairs you hear aliens coming down from the roof. 
 
-		Mulan stares down the alien while you look for a way to defeat the alien.
+You go into what looks like an abandoned surgery room. While looking at shards of glass mirrors and decaying tools you hear an alien enter. 
+
+[[You Distract Alien->YouDistract]]
+
+[[Karen Distract Alien->KarenDistract]]
+
+
+
+:: SplitUpWithMulan {"position":"2650,100","size":"100,100"}
+You and Mulan head deeper into level one as Karen and Abbas head upstairs. As you go deeper down the hall you discover there are 2 rooms across from each other and so you go into room 1 “Documents” and Mulan into “Supplies”. You walk in to see 2 cabinets filled with documents labeled “Unknown creatures”. But you also see a fridge full of small liquid bottles and mirrors
+
+[[Look Into Cabinets First->LookIntoCabinets]]
+
+
+
+:: StandGround {"position":"1600,1050","size":"100,100"}
+Mulan stares down the alien while you look for a way to defeat the alien.
 [[Take Turns Making Eye Contact w/ Alien->TakeTurns]]
 [[Find Place to Hide->FindPlaceToHide]]
 
@@ -462,18 +489,18 @@ One days, aliens came to Earth from a meteor shower, plunging the world into cha
 
 (set: $name to (prompt: "Enter your name", ""))
 
-[[Start ->WakeUp]] 
+[[Start ->WakeUp]]
 
 
 :: StartExpedition {"position":"1100,700","size":"100,100"}
 After meeting a few other survivors, including the survivors that will be a part of your scavenger group for the day, you and the three other survivors your met set off towards a direction away from the Safe Haven. You all hope to find some materials and supplies, but perhaps also figure out anything else important about the aliens that ravaged the Earth.
 
 The group examines a map they brought, and finds some locations that may have valuable information or resources. 
-“Your call, $name, we got four locations that are unexplored. Theres a mall and a school. From other scavenger reports, they both seem to be abandoned and unexplored. Let’s choose one spot for the day and go there,” Mulan says to you, letting you make the decision on which location to scavenge.
+“Your call, $name, we got four locations that are unexplored. Theres a mall, school, and another abandoned hospital. From other scavenger reports, they both seem to be abandoned and unexplored. Let’s choose one spot for the day and go there,” Mulan says to you, letting you make the decision on which location to scavenge.
 
 [[Go to the Abandoned Mall ->AbandonedMall]]
 [[Go to the Abandoned School ->School]]
-[[Go to the Abandoned Hospital ->HospitalPrompt"]]
+[[Go to the Abandoned Hospital ->Hospital]]
 
 
 :: Stay {"position":"725,1650","size":"100,100"}
@@ -501,8 +528,7 @@ You spot an Alien stomping slowly, scanning the room. It’s not looking at you 
 
 
 :: TakeTurns {"position":"1800,1100","size":"100,100"}
-
-		You and Mulan alternate between one another as both of you slowly make your exit. You manage to put some distance between yourselves and the alien, maintaining line of sight with the alien until Mulan sneezes, allowing the alien to bound towards her position.
+You and Mulan alternate between one another as both of you slowly make your exit. You manage to put some distance between yourselves and the alien, maintaining line of sight with the alien until Mulan sneezes, allowing the alien to bound towards her position.
 [[Turn Around and Help Mulan->TurnAroundHelp]]
 [[Run->Run]]
 
@@ -515,8 +541,7 @@ GAME OVER
 
 
 :: TryToFindSurvivorsPrompt {"position":"2575,1125","size":"100,100"}
-
-		You go down to the first floor and try to find the other two survivors. Instead, however, you see an alien, and, the alien, being immobilized, realizes you are there. Being without a partner, you are unable to move safely, and, after blinking, die.
+You go down to the first floor and try to find the other two survivors. Instead, however, you see an alien, and, the alien, being immobilized, realizes you are there. Being without a partner, you are unable to move safely, and, after blinking, die.
 
 			GAME OVER
 <img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
@@ -534,6 +559,14 @@ You have woken up in the abandoned hospital the group you recently joined had ma
 [[Go to dining room ->ExploreSafeHaven]]
 
 
+:: WeaknessFile {"position":"2950,225","size":"100,100"}
+File: Weaknesses - When you open the file it shows images that have been captured of the aliens and everything that was found out about them. It reads that if mirrors were to be presented in front of them something causes the aliens to killll themselves.
+
+[[Back->LookIntoCabinets]] 
+(set: $weaknessFile to true)
+(set: $count to $count + 1)
+
+
 :: WhatIsKaren {"position":"1425,550","size":"100,100"}
 “I don’t mean to be rude, but… are you a man or a woman?” You ask curiously, yet cautiously. 
 
@@ -543,7 +576,17 @@ Devin chuckles. “No need to worry, friend. I take no offense. I’m non-binary
 (set: $count to $count + 1)
 
 
+:: YouDistract {"position":"2850,425","size":"100,100"}
+Karen holds the aliens’ eyes to give you a few seconds to grab a weapon. You grab a piece of mirror and turns towards the alien in a desperate attempt to kill it.
+
+The alien turns it attention to you but for some reason freezes you looking into its eyes. After a brief moment it shreds itself to pieces. Baffled by what just happened, you and Karen take this chance to run down and warn the others.
+
+[[Go To Ending->Ending6]]
+
+
+
 :: init [startup] {"position":"600,100","size":"100,100"}
 (set: $npcMet to 0)
 (set: $findBookInOffice to false)
 (set: $readJournal to false)
+(set: $weaknessFile to false)
