@@ -181,6 +181,7 @@ GAME OVER
 (if: $count &gt;= 2)[
 	&quot;It was nice meeting you Mulan. See you later for the scavenging expedition.&quot;
 	[[Leave-&gt;ExploreSafeHaven]] 
+    (set: $npcMet to $npcMet + 1)
 ]</tw-passagedata><tw-passagedata pid="34" name="OpenCabinetDoorsPrompt" tags="" position="1125,1200" size="100,100">You discover a person… Who doesn’t seem to be breathing. They’re holding a journal of some sort.
 
 [[Take The Journal-&gt;TakeTheJournalPrompt]]</tw-passagedata><tw-passagedata pid="35" name="OpenTopDrawer" tags="" position="1300,1100" size="100,100">You discover a few cans of food in the top drawer of a cabinet full of emergency resources, and you place the resources in your backpack.

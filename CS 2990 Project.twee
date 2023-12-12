@@ -357,6 +357,7 @@ You walk into a room with a laid-out map of the surrounding area, and you meet a
 (if: $count >= 2)[
 	"It was nice meeting you Mulan. See you later for the scavenging expedition."
 	[[Leave->ExploreSafeHaven]] 
+    (set: $npcMet to $npcMet + 1)
 ]
 
 
