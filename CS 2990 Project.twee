@@ -225,8 +225,56 @@ You two try to sneak into the room; however, the door hinges have not been lubri
 
 
 :: HospitalPrompt" {"position":"875,550","size":"100,100"}
+The group heads through destroyed and opened gates leading to the 2 story abandoned hospital, dodging a few aliens on the way in by staying low
 
+As soon as you enter the place there is a disaster of papers full of patients names and stairs leading up to the second floor of the hospital. The stairs also lead up to the roof where the aliens have taken a stance looking for survivors.
 
+:: SplitUp" {"position":"875,550","size":"100,100"}
+[[Split Up With Mulan -> SplitUpWithMulan]]
+[[Split Up With Karen -> SplitUpWithKaren]]
+
+:: SplitUpWithMulan" {"position":"875,550","size":"100,100"} 
+You and Mulan head deeper into level one as Karen and Abbas head upstairs. As you go deeper down the hall you discover there are 2 rooms across from each other and so you go into room 1 “Documents” and survivor 1 into “Supplies”. You walk in to see 2 cabinets filled with documents labeled “Unknown creatures”. But you also see a fridge full of small liquid bottles and mirrors
+If “you look into cabinets first”: You see 2 main files. One says antidotes, one says weaknesses. 
+
+File: Weaknesses - When you open the file it shows images that have been captured of the aliens and everything that was found out about them. It reads that if mirrors were to be presented in front of them they would die the same way survivors would if looked in the eyes. 
+
+This is when you here a call for help from Mulan, so you quickly grab the mirror from the fridge and face it outward to the aliens. You and Mulan make it out and regroup with the others taking the files.
+
+File: Antidote - As you read this file it explains what each bottle in the fridge is and what it does. The bottles are used to inject into a survivor if they were to accidentally look away but only works before they are affected for 10 seconds. 
+
+As you’re reading on you hear a strong call for help from Mulan. As you are running out you run into another alien. 
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+:: OpenFridgeFirst" {"position":"875,550","size":"100,100"} 
+When you open the fridge you see bottles of liquid and mirrors. You choose to look at both when you hear an alien coming and you need to choose one.
+
+Liquid bottle - The label writes, inject when in sight of an alien. As the alien approaches the room you look into its eyes and quickly inject the liquid. Before you go down you are able to take in the liquid and run out to warn survivor 1 and regroup.
+
+Mirror - Player quickly grabs the mirror, missing the back that writes to face the reflection to the aliens. As they flip the mirror they see the reflection of the aliens' eyes. 
+
+GAME OVER 
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+:: SplitOffWithKaren" {"position":"875,550","size":"100,100"} 
+You head up the stairs with Karen as Mulan and Abbas head into the hall. As you cautiously go up the stairs you hear aliens coming down from the roof. 
+
+You go into what looks like an abandoned surgery room. While looking at shards of glass mirrors and decaying tools you hear an alien enter. 
+(if: KarenDistractAlien is true) 
+Karen holds the aliens’ eyes to give you a few seconds to grab a weapon. Player takes a chance and grabs a piece of mirror to face toward the alien. 
+
+The alien looks into its eyes and dies as survivors would. You and Karen take this chance to run down and warn the others.
+
+(if: YouDistractAlien is true) 
+You stand in front of alien for a few seconds of distraction. As Karen looks, the player grows weaker and weaker. To no avail, Karen is too late.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+:: RegroupWithOtherSurvivors" {"position":"875,550","size":"100,100"} 
+You manage to escape, you find the others and regroup. With everything they have left, all survivors run out from the entrance. Within the debris they squat down until the aliens clear out back to the roof.
 
 :: JumpOutOfTheCloset {"position":"1025,2100","size":"100,100"}
 You burst out of the closet, with the shard of glass in your hand. You look at the Alien intently after glancing.
