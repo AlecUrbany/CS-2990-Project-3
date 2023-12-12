@@ -1,0 +1,491 @@
+:: StoryTitle
+CS 2990 Project
+
+
+:: StoryData
+{
+  "ifid": "B716625C-5458-4F44-A460-78E439F5C338",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Start",
+  "zoom": 0.6
+}
+
+
+:: AbandonedMall {"position":"1500,900","size":"100,100"}
+The group heads to the abandoned, multi-level indoor mall, seeing several aliens amongst the wrecks of abandoned cars in the main parking lot in front of the entrance. Although the aliens are made aware of their presence, since they cannot move while the group’s eyes are upon them, they are aware when there are people in the vicinity. The group somehow manages to get into the front entrance by using the cars.
+
+Arriving at the first floor of the mall, the group decides to spend only one hour searching the premises, fearing discovery by the aliens outside. The group decides to split up, in order to cover more ground - Mulan goes with you, and Abbas goes with Karen.
+
+You are accompanied by Mulan and go to the second floor of the mall, into one of the larger department stores, scavenging for any remaining non-perishable food items and hygiene supplies. However, Mulan drops one of these items, making a loud noise and alerting a previously undetected alien to their presence. None of you have seen the alien yet, but they can hear it walking towards their position.
+
+[[Hide->Hide]]
+[[Run for Exit->RunForExit]]
+[[Stand Ground->StandGround]]
+
+
+
+:: Abbas {"position":"1375,200","size":"100,100"}
+You make your way to the reception area, spotting a few other survivors scouting out the area for any nearby aliens. You meet one survivor in particular; a man with light-brown skin sitting against a wall. He wears a rough-looking kufi, seemingly torn a bit from rough conditions. As you walk up to him, he looks up at you from the ground before standing up to greet you. 
+
+“How are you doing? My name is Abbas.” He says as he places a hand on his chest and slightly bows to you.
+“I heard we’ll be joining each other in a scavenging group later. Is there anything you’d like to know?” 
+
+[[Do you know what to expect from an alien?->AboutAlien]]
+[[Do the aliens have a weakness? ->AskAlienWeakness]]
+[[What do we do when we encounter an alien?->AlienEncounterInfo]]
+(if: $count >= 3)[
+	"Thank you for looking out for us. I’ll see you later during the expedition."
+	[[Leave->ExploreSafeHaven]] 
+]
+
+
+:: About Karen {"position":"1575,375","size":"100,100"}
+As you ask this, Karen looks to the ceiling of the room and deep thought for a moment. “Not necessarily… I was a medical student before everything happened. I just thought I’d use some of my knowledge to help people out here.” Karen says with a smile. “Just don’t come to me expecting me to give you surgery.” Karen says with a chuckle.
+
+[[Back ->Karen]]
+(set: $count to $count + 1)
+
+
+:: About Mulan {"position":"950,75","size":"100,100"}
+“You want to know about me?” 
+
+Mulan sighs for a moment before responding. “I lived with my husband before everything happened, and I was working at my office when I heard a loud boom, which we now know was the impact of the meteor that let all those hideous things on our planet…” 
+
+She pauses for a moment. “I tried calling him as many times as I could, but he couldn’t answer. I never found him… I guess I volunteered to be in charge of recording what scavengers see on these maps, so that I can maybe figure out how to find him.”
+
+[[Back ->Mulan]] 
+(set: $count to $count + 1)
+
+
+:: AboutAlien {"position":"1350,50","size":"100,100"}
+“The like to hunt us humans. That’s all you really need to know. As soon as you turn your back on those creatures, you’ll be as good as dead,” He says sternly. 
+
+“From what we’ve seen, they’d be seven feet tall if they stood on their hind legs, and they have massive claws that can easily tear you to shreds.” Abbas’s voice trembles slightly as he says this. “Don’t forget these evil, red eyes. If you couldn’t tell they weren’t from this planet, those eyes will tell you everything…”
+
+[[Back ->Abbas]]
+(set: $count to $count + 1)
+
+
+:: AboutExploration {"position":"1150,50","size":"100,100"}
+“Right now we’ve explored quite a bit outside of our Safe Haven, but we dried up all the resources within a half-mile radius.”  She points to a circle surrounding the Safe Haven hospital on the map. 
+
+“We plan to search inside a few locations, including a mall and a school. I’ll be a part of that scavenging group that explores these areas. I heard you’ll be tagging along. Let’s hope you’re as tough as you look.” She says with a slight chuckle. 
+
+[[Back ->Mulan]]
+(set: $count to $count + 1)
+
+
+:: AlienEncounterInfo {"position":"1550,225","size":"100,100"}
+“To be honest, just stare at them and hope they’ll leave you alone… But that’s usually never the case. They’ll stare at you until you give up and wish for death. The only real way we survive against one of them is to have strength in numbers,” He says seriously. “As long as at least one person is looking at it, it won’t move. One person can keep an eye on it as the other people run away, and we usually repeat that process until we get far enough for everyone to escape.” 
+Abbas suddenly looks at you with a stern expression. “Be sure to watch my back and I’ll watch yours later on our scavenging expedition.”
+
+[[Back ->Abbas]]
+(set: $count to $count + 1)
+
+
+:: AskAlienWeakness {"position":"1525,75","size":"100,100"}
+“Not that we know of…” Abbas says with a disappointed click of his tongue. “Tch. Their skin too hard to even damage them, and never have we seen one of them be taken down.” He pauses for a moment. “We have spotted a few of their corpses lying around… So it's possible for them to be killed. But we can’t for the life of us figure out how they die.”
+
+[[Back ->Abbas]]
+(set: $count to $count + 1)
+
+
+:: BarricadeDoor {"position":"1925,1350","size":"100,100"}
+
+		Working together, you and Mulan manage to barricade the door temporarily. The alien is making a great effort to break down the door; you estimate that you have only five minutes before the door is broken down so you search the room for a possible solution to your problem.
+[[Search Manager’s Office->SearchManagerOffice]]
+[["Stand Ground->StandGround2]]
+
+
+:: CloseTheJournalPrompt {"position":"900,1950","size":"100,100"}
+You close the journal gently, hoping not to alert the alien outside. You shift your position a bit to get a closer look as to what’s happening outside, peeking through the slit in the cabinet. As you shift, you feel something sharp below you; it’s a large shard of glass…
+
+Before you can process, you hear the familiar voice of Karen shouting at the door of the classroom.
+“Hey, I need a second pair of eyes!” You hear Karen shout. “One of them’s chasing me-”
+Karen gets cut off as they seem to notice the alien in the room. Your eyes widen in fear as you watch from the closet, seeing the alien turn its head towards Karen
+
+[[Jump Out Of The Closet->JumpOutOfTheCloset]]
+[[Stay In The Closet->StayInTheCloset]]
+
+
+:: ContinueLookingForCluesPrompt1 {"position":"2350,1375","size":"100,100"}
+You continue searching the manager’s office to no avail. Mulan spots a backdoor from which you can exit from; with little choice, the pair sneak out and find a way to escape.
+
+
+[[Try to make a run for it->RunForExit2]] 
+(if: $findBookInOffice is true)[
+	You remember the book mentioned something about the dressing room and people escaping.
+	[[Sneak towards the dressing room->DressingRoom]]
+]
+
+
+:: DressingRoom {"position":"2525,1475","size":"100,100"}
+Upon reaching the dressing room, you look for what the previous party used to escape, and are initially shocked to find an alien already in there; however it is immobile, staring at itself in the mirror. You realize the previous group had managed to trap the alien that was pursuing them. You and Mulan hastily make their escape from the mall, and are able to meet up with Abbas and Karen, though they are empty-handed. 
+
+[[Go to ending->Ending1]]
+
+
+:: Ending1 {"position":"2400,750","size":"100,100"}
+Feeling lucky to have survived, the four of you decide to return to Safe Haven.
+
+THE END
+
+
+:: Ending2 {"position":"2775,950","size":"100,100"}
+Feelling sorrow over Mulan's sacrifice, the three of you decide to cut your losses for the day and return to Safe Haven
+
+THE END
+
+
+:: Ending3 {"position":"1800,1525","size":"100,100"}
+Managing to survive and obtain some resources, you and Mulan meet back up with Abbas and Karen. Recounting to them your encounter, the four of you return to camp, satisfied with the resources you scavenged.
+
+
+:: Ending4 {"position":"1375,2100","size":"100,100"}
+The scavenging group meets up, and it turns out everyone made it out alive. You briefly describe you encounter with the aliens and how they killed themselves after looking at their reflection. You all make your way back to the Safe Haven having now learned a way to combat the aliens.
+
+THE END
+
+
+:: ExitMallPrompt {"position":"2550,950","size":"100,100"}
+You exit the mall, empty-handed. Eventually, you are able to rendezvous with Abbas and Karen after waiting for them at the mall’s entrance.
+
+[[Go to Ending->Ending2]]
+
+
+:: ExploreSafeHaven {"position":"1100,350","size":"100,100"}
+After you got some delicious slop, you sit down to eat your food before deciding to explore a bit in the Safe Haven.
+
+
+(link: "Go to Map Room")[
+	(set: $npcMet to $npcMet + 1)
+    (goto: "Mulan")
+]
+(link: "Go to Lobby")[
+	(set: $npcMet to $npcMet + 1)
+    (goto: "Abbas")
+]
+(link: "Go To First-Aid Room")
+	[(set: $npcMet to $npcMet + 1)
+    (goto: "Karen")
+]
+(if: $npcMet >= 3)[
+	[[Start scavenging expedition ->StartExpedition]]
+]
+(set: $count to 0)
+
+
+:: FindPlaceToHide {"position":"1600,1200","size":"100,100"}
+
+[[Hide in Dressing Room->HideInDressingRoom]]
+[[Hide in EMPLOYEE ONLY Room->HideInEmployeeRoom]]
+
+
+
+:: GoLeft {"position":"2275,1000","size":"100,100"}
+You run left and see an elevator. Fortunately, the alien has decided to pursue Mulan. You manage to get down the elevator onto the first floor.
+
+[[Exit the Mall->ExitMallPrompt]]
+[[Try to Find Abbas and Karen->TryToFindSurvivorsPrompt]]
+
+
+:: GoRight {"position":"2375,1125","size":"100,100"}
+
+		You run right and, upon seeing an emergency exit stairwell, elect to enter it. Unfortunately, the alien chooses to follow you, and, as there is no way to maintain a line of sight with the alien in the stairwell, it manages to quickly catch up.
+
+			GAME OVER.
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: Hide {"position":"1700,900","size":"100,100"}
+
+		You attempt to hide in the aisle, hoping that the alien has not already located your exact position. Unfortunately, it already knows, and both you and Mulan die.
+
+			GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: HideBehindATable {"position":"850,1525","size":"100,100"}
+You dart behind a knocked-over table and hold your breath, hoping the Alien won’t notice. A few minutes pass, and the Alien’s stomps grow closer, knocking over a few tables as they come closer.
+
+[[Stay->Stay]]
+[[Stand Up From The Desk And Look At The Alien->LookAtTheAlien]]
+
+
+:: HideInDressingRoom {"position":"1600,1400","size":"100,100"}
+You and Mulan make a run for it and hide in one of the rooms. You are initially shocked to find an Alien already in one of the rooms; however, it is immobile, staring at itself in the mirror. Realizing what has happened, you two stand your ground in the room and trap the Alien that has been pursuing you in the same way. Your plan works, and both are able to leave without being followed. You continue on with your scavenging mission and are able to leave on schedule.
+[[Go to Ending->Ending3]]
+
+
+:: HideInEmployeeRoom {"position":"1775,1325","size":"100,100"}
+You two try to sneak into the room; however, the door hinges have not been lubricated for a long time, and the alien is immediately alerted to their presence.
+
+[[Run Into Room & Barricade Door->BarricadeDoor]]
+
+
+:: HospitalPrompt" {"position":"875,550","size":"100,100"}
+
+
+
+:: JumpOutOfTheCloset {"position":"1025,2100","size":"100,100"}
+You burst out of the closet, with the shard of glass in your hand. You look at the Alien intently after glancing.
+
+[[Raise The Piece Of Glass Towards The Alien->RaiseThePieceOfGlassTowardsTheAlien]]
+
+
+:: Karen {"position":"1350,375","size":"100,100"}
+You peek inside one of the emergency rooms in the hospital, and see a survivor helping out a man tend to their wounds. You ask, “Uh, can I come in?” 
+
+The survivor that's helping out the man seems to be a tall… man? Woman? You’re not entirely sure. They seem to share both masculine and feminine features. They seem quite young and have dark skin. They have a buzz-cut with one earring on their left ear. They respond, “You can come in. I’m just finishing up here.” They turn to the main and wrap a bandage around his arm before letting him leave the room. They turn back towards you. “My name’s Karen. How can I help you?
+
+[[Are you a doctor? ->About Karen]]
+[[How many people visit you each day?->KarenDay]]
+[[Are you a man or a woman?->WhatIsKaren]]
+(if: $count >= 3)[
+	"I'll try not to give you too much work then. I’ll see you later during the expedition."
+	[[Leave->ExploreSafeHaven]] 
+]
+
+
+
+:: KarenDay {"position":"1600,525","size":"100,100"}
+Karen lets out a sigh. “Way too much, to be honest… That man that you saw was the 15th person this day. It seems like the scavenger expeditions aren’t getting any easier…” Devin says sadly. “Speaking of expeditions, I’ll be joining you later. You can count on me for any injuries you encounter, alright?”
+
+[[Back ->Karen]]
+(set: $count to $count + 1)
+
+
+:: LookAtTheAlien {"position":"1300,1525","size":"100,100"}
+With seemingly no other options, you decide to stand your ground and stare at the alien. Its beady red eyes stare right back at you, as it lets out a low growl. You’re running out of options…
+
+You hear another set of stomping from outside the classroom, and it grows louder as another alien crawls into the classroom. You look frantically between the two, but it’s no use. You can’t look at them both…
+
+You close your eyes and accept your fate, as you feel a sharp pain in your abdomen, breathing your last breath.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: Mulan {"position":"1075,200","size":"100,100"}
+	You walk into a room with a laid-out map of the surrounding area, and you meet a rough-looking asian woman, with her hair tied-up in a ponytail. As you approach her, she looks towards you and you notice a scar across her eye.
+	“Hey there. You look like you just woke up. Something you need?” She asks you, as she shakes your hand. “My name’s Mulan by the way. I’m just examining the map right now.” 
+
+[[Ask her about herself ->About Mulan]]
+[[How much have we explored?->AboutExploration]]
+(if: $count >= 2)[
+	"It was nice meeting you Mulan. See you later for the scavenging expedition."
+	[[Leave->ExploreSafeHaven]] 
+]
+
+
+:: OpenCabinetDoorsPrompt {"position":"1125,1200","size":"100,100"}
+You discover a person… Who doesn’t seem to be breathing. They’re holding a journal of some sort.
+
+[[Take The Journal->TakeTheJournalPrompt]]
+
+
+:: OpenTopDrawer {"position":"1300,1100","size":"100,100"}
+You discover a few cans of food in the top drawer of a cabinet full of emergency resources, and you place the resources in your backpack.
+
+[[Go Back->School]]
+
+
+:: PullCorpseOutAndHide {"position":"1050,1600","size":"100,100"}
+You yank the corpse out before jumping in the cabinet and closing the doors. You control their breathing. Outside, the Alien’s stomps grow more frequent and louder. You hear the Alien lunge forward and hear flesh being torn and the crunching of bones, as the Alien devours the corpse. You struggle to control their breathing and stay silent, clutching the journal tightly in your arms. As you clutch it, the thought crosses your mind: “Why was the person in the closet clutching this journal?...” You open the journal quietly and try to read anything you can see, using a bit of light from a slit in the cabinet door shining down on the pages.
+
+[[Read The First Page->ReadTheFirstPage]]
+[[Read A Few Pages In The Middle->ReadAFewPagesInTheMiddle]]
+[[Read The Last Page->ReadTheLastPage]]
+[[Close journal->CloseTheJournalPrompt]]
+
+
+:: RaiseThePieceOfGlassTowardsTheAlien {"position":"1200,2100","size":"100,100"}
+With almost no confidence of whether or not you’re making the right call, you raise the glass toward the alien to show its own reflection. You watch as the alien spasms for a moment before it starts violently scratching and tearing at its own hide, spilling its contents across the floor of the classroom and splashing its dark red blood across the walls.
+
+You slowly look back up at Karen, with an astonished look on your face, to which Karen returns. You hear the loud stomping of the alien that was chasing Karen, and you rush past her to try the same thing on the alien. You and Karen watch as the alien stops in its tracks and stares at the piece of glass in your hand for a moment before bashing its head into one of its claws, slumping over on the ground.
+
+“Wha-... How’d you know that would work?” Karen asks you in a confused tone.
+“I’ll explain later, let's meet back up with the others. Let’s hope they’re not in trouble.”
+
+[[Go to Ending->Ending4]]
+
+
+:: ReadAFewPagesInTheMiddle {"position":"1050,1825","size":"100,100"}
+You skip to a random page in the middle and skim past its contents. It describes an entry for a day in the apocalypse, and how the owner of the journal ended up spotting an alien. What catches your eye, however, is that they witnessed an alien chasing a person into a pond. The alien stopped at the edge of the pond as the person jumped in, hoping to escape the alien. Strangely enough, the alien shoved its own claws into its abdomen shortly after looking into the pond’s surface. The journal describes the author gasping as he saw this, confused as to why the alien had suddenly killed itself. 
+“Is it weak to water?...” You wonder to yourself. “No, that’s not it. Maybe it saw its own reflection?...”
+
+[[Read The First Page->ReadTheFirstPage]]
+[[Read The Last Page->ReadTheLastPage]]
+[[Back->PullCorpseOutAndHide]]
+(set: $readJournal to true)
+
+
+:: ReadBook {"position":"2175,1225","size":"100,100"}
+The book is a journal, presumably owned by the deceased. Flipping to the last page, the following text can be read, albeit written by a clearly unsteady hand.
+
+“It’s too late for me. Barry and the others ran for the exit - I would’ve just slowed them down, never would’ve made it to the dressing room in time, an old man like - ”
+
+The note abruptly cuts off; however, the reference to the dressing room  ignites a glimmer of hope. The player exits the office.
+
+[[Exit the Office->SearchManagerOffice]]
+(set: $findBookInOffice to true)
+
+
+:: ReadTheFirstPage {"position":"850,1775","size":"100,100"}
+You skim across some handwriting, and you figure out that it’s a journal full of entries for certain dates. The first date is close to the date of when the aliens first arrived, according to the information given by the news channels of the day of arrival. It describes the owner of the journal scrounging for materials and food, as well as small maps of where the owner went. Other than that, nothing else seems out of the ordinary.
+
+[[Read A Few Pages In The Middle->ReadAFewPagesInTheMiddle]]
+[[Read The Last Page->ReadTheLastPage]]
+[[Back->PullCorpseOutAndHide]]
+
+
+
+:: ReadTheLastPage {"position":"1250,1775","size":"100,100"}
+The journal describes the author having to hide themselves in this closet for days, with the final entry being their last day. He wrote about how two aliens had chased him to this classroom, and how he hid in this closet for days, waiting for the aliens to leave. It seems the aliens didn’t leave, forcing the author to stay in this closet until he ultimately died of starvation. The entry ends with a slight scribble, signifying his last breath.
+
+[[Read The First Page->ReadTheFirstPage]]
+[[Read A Few Pages In The Middle->ReadAFewPagesInTheMiddle]]
+[[Back->PullCorpseOutAndHide]]
+
+
+:: Run {"position":"2075,1100","size":"100,100"}
+You bolt, with Mulan trailing behind her. Make a split-second decision!
+
+The two of you decide to split up, in hopes that one of you will be able to escape.
+
+[[Go Right->GoRight]]
+[[Go Left->GoLeft]]
+
+
+:: RunForExit {"position":"1675,775","size":"100,100"}
+
+		Both you and Mulan run for the exit, dropping all of your collected supplies. The alien is much faster, and you do not survive.
+
+			GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: RunForExit2 {"position":"2525,1300","size":"100,100"}
+You try to make for the exit, but are quickly sighted by the alien and are killed.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: School {"position":"1125,1025","size":"100,100"}
+The group heads to the abandoned school, spotting a few aliens along the way, but narrowly avoiding them by darting across debris.
+
+You all eventually arrive at the school, and discover that it’s a huge school with multiple buildings. Mulan makes notes of the location and they decide to explore, but Abbas speaks up.
+“We should split up to cover more ground. The aliens tend to hunt in larger numbers at night. If we split up, we can explore most of the area before night comes.”
+
+Karen seems a little bothered by the suggestion, but reluctantly agrees, as well as everyone else. You go off on your own to explore a small classroom, filled with chairs and tables that seem to be torn apart as if they were pieces of paper. You see a closed cabinet.
+
+[[Open Top Drawer->OpenTopDrawer]]
+[[Open Cabinet Doors->OpenCabinetDoorsPrompt]]
+
+
+:: SearchManagerOffice {"position":"2175,1375","size":"100,100"}
+You find a long-deceased body behind a cabinet. The body is clutching a book, of some sorts, stained by dried blood.
+
+[[Read Book->ReadBook]]
+[[Continue Looking For Clues->ContinueLookingForCluesPrompt1]]
+
+
+:: StandGround {"position":"1600,1050","size":"100,100"}
+
+		Mulan stares down the alien while you look for a way to defeat the alien.
+[[Take Turns Making Eye Contact w/ Alien->TakeTurns]]
+[[Find Place to Hide->FindPlaceToHide]]
+
+
+:: StandGround2 {"position":"2125,1550","size":"100,100"}
+You turn around attempting to regain sight of the alien as you two had done previously. However, you are too slow this time around and are killed.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: Start {"position":"800,350","size":"100,100"}
+One days, aliens came to Earth from a meteor shower, plunging the world into chaos. Humanity tried to communicate with the aliens but it proved to be impossible, they only desire they have towards humans is to hunt. The military were unable to stop the aliens, leaving individuals to fend for themselves. As a result, the survivors formed groups and have taken up shelter wherever they could.
+
+(set: $name to (prompt: "Enter your name", ""))
+
+[[Start ->WakeUp]] 
+
+
+:: StartExpedition {"position":"1100,700","size":"100,100"}
+After meeting a few other survivors, including the survivors that will be a part of your scavenger group for the day, you and the three other survivors your met set off towards a direction away from the Safe Haven. You all hope to find some materials and supplies, but perhaps also figure out anything else important about the aliens that ravaged the Earth.
+
+The group examines a map they brought, and finds some locations that may have valuable information or resources. 
+“Your call, $name, we got four locations that are unexplored. Theres a mall and a school. From other scavenger reports, they both seem to be abandoned and unexplored. Let’s choose one spot for the day and go there,” Mulan says to you, letting you make the decision on which location to scavenge.
+
+[[Go to the Abandoned Mall ->AbandonedMall]]
+[[Go to the Abandoned School ->School]]
+[[Go to the Abandoned Hospital ->HospitalPrompt"]]
+
+
+:: Stay {"position":"725,1650","size":"100,100"}
+The alien’s stomps grow closer, but you commit and hope the alien doesn’t notice. You believe your hopes are answered as the stomping comes to a stop, but you suddenly hear a low growl next to your ear before feeling a sharp pain in your stomach. You look down to see one of the Alien’s claws protruding out the front of your stomach. You look up to see the Alien’s gleaming, pupilless eyes before losing consciousness.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: StayInTheCloset {"position":"775,2100","size":"100,100"}
+You stay in the closet, controlling your breathing. You decide to conceal your position and watch as Karen frantically struggles to figure out which alien to look at; the one behind or the one in the room. It’s no use however, and you watch as Karen gets violently torn to pieces. You let out a gasp, and the alien lunges towards the cabinet, ending your life before you could even react…
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: TakeTheJournalPrompt {"position":"1050,1400","size":"100,100"}
+You hesitate for a moment, before reluctantly grabbing the journal. You get curious and open it to begin reading it, before getting interrupted by a low growl at the entrance of the classroom.
+
+You spot an Alien stomping slowly, scanning the room. It’s not looking at you just yet. You frantically look around to find options.
+
+[[Hide Behind A Knocked-Over Table->HideBehindATable]]
+[[Pull The Corpse Out And Hide Inside The Closet->PullCorpseOutAndHide]]
+[[Look At The Alien And Stand Your Ground->LookAtTheAlien]]
+
+
+:: TakeTurns {"position":"1800,1100","size":"100,100"}
+
+		You and Mulan alternate between one another as both of you slowly make your exit. You manage to put some distance between yourselves and the alien, maintaining line of sight with the alien until Mulan sneezes, allowing the alien to bound towards her position.
+[[Turn Around and Help Mulan->TurnAroundHelp]]
+[[Run->Run]]
+
+
+:: TryToFindSurvivorsPrompt {"position":"2575,1125","size":"100,100"}
+
+		You go down to the first floor and try to find the other two survivors. Instead, however, you see an alien, and, the alien, being immobilized, realizes you are there. Being without a partner, you are unable to move safely, and, after blinking, die.
+
+			GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
+
+
+:: TurnAroundHelp {"position":"2075,925","size":"100,100"}
+You turn around just in time, as the alien is now right in front of you. You two resume your previous escape tactic, and eventually are able to run to the exit.
+
+[[Go to Ending->Ending1]]
+
+
+:: WakeUp {"position":"950,350","size":"100,100"}
+You have woken up in the abandoned hospital the group you recently joined had made their shelter and are calling it "Safe Haven". You remember the group leaders were going to send out a small party to scavenge for material today. Hoping to be selected  you get up and go get some food in you.
+
+[[Go to dining room ->ExploreSafeHaven]]
+
+
+:: WhatIsKaren {"position":"1425,550","size":"100,100"}
+“I don’t mean to be rude, but… are you a man or a woman?” You ask curiously, yet cautiously. 
+
+Devin chuckles. “No need to worry, friend. I take no offense. I’m non-binary. Call me by my name or by any pronouns. You’re good.” Devin says with another light chuckle.
+
+[[Back ->Karen]]
+(set: $count to $count + 1)
+
+
+:: init [startup] {"position":"600,100","size":"100,100"}
+(set: $npcMet to 0)
+(set: $findBookInOffice to false)
+(set: $readJournal to false)
