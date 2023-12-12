@@ -231,7 +231,10 @@ You two try to sneak into the room; however, the door hinges have not been lubri
 :: JumpOutOfTheCloset {"position":"1025,2100","size":"100,100"}
 You burst out of the closet, with the shard of glass in your hand. You look at the Alien intently after glancing.
 
-[[Raise The Piece Of Glass Towards The Alien->RaiseThePieceOfGlassTowardsTheAlien]]
+[[Try To Escape->TryEscape]]
+(if: $readJounal is true)[
+	[[Raise The Piece Of Glass Towards The Alien->RaiseThePieceOfGlassTowardsTheAlien]]
+]
 
 
 :: Karen {"position":"1350,375","size":"100,100"}
@@ -454,6 +457,13 @@ You spot an Alien stomping slowly, scanning the room. It’s not looking at you 
 		You and Mulan alternate between one another as both of you slowly make your exit. You manage to put some distance between yourselves and the alien, maintaining line of sight with the alien until Mulan sneezes, allowing the alien to bound towards her position.
 [[Turn Around and Help Mulan->TurnAroundHelp]]
 [[Run->Run]]
+
+
+:: TryEscape {"position":"1025,2225","size":"100,100"}
+You attemp to escape with Karen, switching who is in eye contact with the alien. As  you exit the room, you trip on the door frame causing you to break eye contact. Karen tries to remake eye contact as fast as she could but it proves futile. With your last breath you try to apologize to Karen but before you can even say the first syllable your vision goes black.
+
+GAME OVER
+<img src="https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&is=6577f207&hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&"\>
 
 
 :: TryToFindSurvivorsPrompt {"position":"2575,1125","size":"100,100"}

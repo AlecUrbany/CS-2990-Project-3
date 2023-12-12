@@ -211,7 +211,10 @@ Karen gets cut off as they seem to notice the alien in the room. Your eyes widen
 [[Jump Out Of The Closet-&gt;JumpOutOfTheCloset]]
 [[Stay In The Closet-&gt;StayInTheCloset]]</tw-passagedata><tw-passagedata pid="43" name="JumpOutOfTheCloset" tags="" position="1025,2100" size="100,100">You burst out of the closet, with the shard of glass in your hand. You look at the Alien intently after glancing.
 
-[[Raise The Piece Of Glass Towards The Alien-&gt;RaiseThePieceOfGlassTowardsTheAlien]]</tw-passagedata><tw-passagedata pid="44" name="RaiseThePieceOfGlassTowardsTheAlien" tags="" position="1200,2100" size="100,100">With almost no confidence of whether or not you’re making the right call, you raise the glass toward the alien to show its own reflection. You watch as the alien spasms for a moment before it starts violently scratching and tearing at its own hide, spilling its contents across the floor of the classroom and splashing its dark red blood across the walls.
+[[Try To Escape-&gt;TryEscape]]
+(if: $readJounal is true)[
+	[[Raise The Piece Of Glass Towards The Alien-&gt;RaiseThePieceOfGlassTowardsTheAlien]]
+]</tw-passagedata><tw-passagedata pid="44" name="RaiseThePieceOfGlassTowardsTheAlien" tags="" position="1200,2100" size="100,100">With almost no confidence of whether or not you’re making the right call, you raise the glass toward the alien to show its own reflection. You watch as the alien spasms for a moment before it starts violently scratching and tearing at its own hide, spilling its contents across the floor of the classroom and splashing its dark red blood across the walls.
 
 You slowly look back up at Karen, with an astonished look on your face, to which Karen returns. You hear the loud stomping of the alien that was chasing Karen, and you rush past her to try the same thing on the alien. You and Karen watch as the alien stops in its tracks and stares at the piece of glass in your hand for a moment before bashing its head into one of its claws, slumping over on the ground.
 
@@ -260,7 +263,10 @@ GAME OVER
 
 [[Go to ending-&gt;Ending1]]</tw-passagedata><tw-passagedata pid="57" name="Ending4" tags="" position="1375,2100" size="100,100">The scavenging group meets up, and it turns out everyone made it out alive. You briefly describe you encounter with the aliens and how they killed themselves after looking at their reflection. You all make your way back to the Safe Haven having now learned a way to combat the aliens.
 
-THE END</tw-passagedata></tw-storydata>
+THE END</tw-passagedata><tw-passagedata pid="58" name="TryEscape" tags="" position="1025,2225" size="100,100">You attemp to escape with Karen, switching who is in eye contact with the alien. As  you exit the room, you trip on the door frame causing you to break eye contact. Karen tries to remake eye contact as fast as she could but it proves futile. With your last breath you try to apologize to Karen but before you can even say the first syllable your vision goes black.
+
+GAME OVER
+&lt;img src=&quot;https://cdn.discordapp.com/attachments/1158860996555841707/1184006552382885929/image.png?ex=658a6707&amp;is=6577f207&amp;hm=ee605ef9097fbf3337a698ad6c222af83391a1f29276e914806949e526344781&amp;&quot;\&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
